@@ -48,7 +48,7 @@ const useDeviceClass = () => {
     ];
 
     // Optional: map to device-year-class, Geekbench.
-    initialDeviceClass = lowEnd.indexOf(model) > 0 ? 'light' : 'heavy';
+    initialDeviceClass = lowEnd.includes(model) ? 'light' : 'heavy';
   }
 
   const [deviceClass, setDeviceClass] = useState(initialDeviceClass);
